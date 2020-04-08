@@ -19,7 +19,7 @@ MVC框架:
 
 class NewsController extends Controller {
   async index() {
-    
+
     // this.ctx.body = '新闻页面'
 
     let msg = 'ejs';
@@ -31,29 +31,6 @@ class NewsController extends Controller {
       msg,
       list
     })
-
-    
-  }
-
-  async content() {
-    // 获取 get 传值
-
-    // koa 中如何获取 get 传值  ctx.query
-    var query = this.ctx.query;
-
-    // console.log(query);
-    
-    this.ctx.body = '新闻详情'
-  }
-
-  async list() {
-
-    // koa 获取动态路由传值 ctx.params
-
-    var params = this.ctx.params;
-    console.log(params);
-    
-    this.ctx.body = '新闻列表'
   }
 }
 

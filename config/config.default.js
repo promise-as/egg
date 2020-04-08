@@ -25,6 +25,8 @@ module.exports = appInfo => {
     },
   };
 
+  config.api = 'http://hbj.com/api'
+
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
@@ -35,10 +37,3 @@ module.exports = appInfo => {
     ...userConfig,
   };
 };
-
-// {app_root}/config/config.default.js
-// exports.view = {
-//   mapping: {
-//     '.ejs': 'ejs',
-//   },
-// };

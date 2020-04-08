@@ -18,15 +18,21 @@ MVC框架:
 
 class HomeController extends Controller {
   async index() {
+
+    // console.log(this.config.api);
     
+
     // 调用服务器里面的方法  注意异步：await
     var list = await this.service.news.getNewsList();
 
-    console.log(list);
-    
+    var user = await this.service.user.getUserInfo();
+
+    // console.log(list);
+
     await this.ctx.render('home', {
-      list: list
-    })
+      list,
+      user
+    });
 
   }
 }
